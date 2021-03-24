@@ -19,6 +19,7 @@ public class NearestTickets implements TicketService {
     private Optional<Predicate<Integer>> condition= Optional.empty();
 
     /**
+     * Лучше не использовать
      * @param digitsQnty количество цифр в билете
      */
     public NearestTickets(int digitsQnty) {
