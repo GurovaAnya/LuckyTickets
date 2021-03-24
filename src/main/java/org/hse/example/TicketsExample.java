@@ -18,8 +18,6 @@ public class TicketsExample {
         System.out.println("Hello world!");
         NearestTicketsBuilder builder = () -> 6;
 
-        //builder.build().doWork().printResult();
-
 
         NearestTickets nearest = new NearestTickets(6, sum -> sum % 3 == 0);
         nearest.doWork().printResult();
