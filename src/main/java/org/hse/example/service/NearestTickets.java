@@ -31,6 +31,11 @@ public class NearestTickets implements TicketService {
         this.distance = this.maxNumber;
     }
 
+    /**
+     * Конструктор
+     * @param digitsQnty количество цифр в билете
+     * @param condition условие слияние
+     */
     public NearestTickets(int digitsQnty, Predicate<Integer> condition) {
         this(digitsQnty);
          this.condition = Optional.of(condition);
