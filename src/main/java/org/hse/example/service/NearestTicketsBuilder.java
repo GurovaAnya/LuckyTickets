@@ -10,6 +10,6 @@ public interface NearestTicketsBuilder extends TicketServiceBuilder {
      */
     @Override
     default TicketService build() {
-        return new NearestTickets(produceDigitsQty());
+        return new NearestTickets(produceDigitsQty(), null);
     }
 }
