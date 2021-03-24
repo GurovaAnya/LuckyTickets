@@ -18,21 +18,16 @@ public class NearestTickets implements TicketService {
     private int distance;
     private Optional<Predicate<Integer>> condition= Optional.empty();
 
-    /**
-     * @param digitsQnty количество цифр в билете
-     */
-    public NearestTickets(int digitsQnty) {
+
+
+    public NearestTickets(int digitsQnty, Predicate<Integer> condition) {
         if (digitsQnty <= 0 || digitsQnty % 2 != 0) {
             throw new IllegalArgumentException("Передан некорректный параметр! " + digitsQnty);
         }
         this.maxNumber = (int) (Math.pow(10, digitsQnty) - 1);
         this.digits = new int[digitsQnty];
         this.distance = this.maxNumber;
-    }
-
-    public NearestTickets(int digitsQnty, Predicate<Integer> condition) {
-        this(digitsQnty);
-         this.condition = Optional.of(condition);
+        this.condition = Optional.of(condition);
     }
 
     /**
