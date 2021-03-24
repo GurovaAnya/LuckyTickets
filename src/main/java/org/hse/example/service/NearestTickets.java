@@ -110,5 +110,7 @@ public class NearestTickets implements TicketService {
                 this.distance,
                 this.ticket,
                 (this.ticket - this.distance));
+
+        // Всем привет, это Аня
     }
 }
